@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SQL_SERVER = "localhost"
+        SQL_SERVER = "PREETU-17\\DATALAKE"
         
     }
 
