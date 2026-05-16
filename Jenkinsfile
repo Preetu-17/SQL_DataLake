@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Preetu-17/SQL-DataLake.git'
+                git 'https://github.com/Preetu-17/SQL_DataLake.git'
             }
         }
 
