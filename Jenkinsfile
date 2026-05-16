@@ -22,7 +22,7 @@ pipeline {
         stage('Bronze - Tables') {
             steps {
                 bat '''
-                for %%f in (sql\\Bronze\\tables\\*.sql) do (
+                for %%f in (Bronze\\Tables\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
@@ -32,7 +32,7 @@ pipeline {
         stage('Bronze - Procedures') {
             steps {
                 bat '''
-                for %%f in (sql\\Bronze\\procedures\\*.sql) do (
+                for %%f in (Bronze\\Procedures\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
@@ -42,7 +42,7 @@ pipeline {
         stage('Silver - Tables') {
             steps {
                 bat '''
-                for %%f in (sql\\Silver\\tables\\*.sql) do (
+                for %%f in (Silver\\Tables\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
@@ -52,7 +52,7 @@ pipeline {
         stage('Silver - Procedures') {
             steps {
                 bat '''
-                for %%f in (sql\\Silver\\procedures\\*.sql) do (
+                for %%f in (Silver\\Procedures\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
@@ -62,7 +62,7 @@ pipeline {
         stage('Gold - Tables') {
             steps {
                 bat '''
-                for %%f in (sql\\Gold\\tables\\*.sql) do (
+                for %%f in (Gold\\Tables\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
@@ -72,7 +72,7 @@ pipeline {
         stage('Gold - Views') {
             steps {
                 bat '''
-                for %%f in (sql\\Gold\\views\\*.sql) do (
+                for %%f in (Gold\\Views\\*.sql) do (
                     sqlcmd -S %SQL_SERVER% -E -C -i "%%f"
                 )
                 '''
