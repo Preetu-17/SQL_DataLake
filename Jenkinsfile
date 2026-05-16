@@ -19,7 +19,7 @@ pipeline {
         stage('Create Database') {
             steps {
                 bat '''
-                sqlcmd -S %SQL_SERVER% -E -i CreateDB.sql
+                sqlcmd -S %SQL_SERVER% -E -C -i CreateDB.sql
                 '''
             }
         }
