@@ -10,7 +10,9 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Preetu-17/SQL_DataLake.git'
+                git branch: 'main',
+                    credentialsId: 'github-token',
+                    url: 'https://github.com/Preetu-17/SQL_DataLake.git'
             }
         }
 
